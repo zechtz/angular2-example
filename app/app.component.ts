@@ -21,7 +21,9 @@ import { WelcomeComponent }                                 from './home/welcome
          </div>
       </nav>
     </div>
-    <router-outlet></router-outlet>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
     `,
     directives:   [ROUTER_DIRECTIVES],
    providers:     [ProductService, HTTP_PROVIDERS, ROUTER_PROVIDERS]
