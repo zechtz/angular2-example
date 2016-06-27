@@ -4,6 +4,7 @@ import { 'rxjs/Rx' };
 import { ROUTER_PROVIDERS, RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
 
 import { ProductListComponent }                             from './products/product-list.component';
+import { ProductDetailComponent }                           from './products/product-detail.component';
 import { ProductService }                                   from './products/product.service';
 import { WelcomeComponent }                                 from './home/welcome.component';
 
@@ -30,8 +31,9 @@ import { WelcomeComponent }                                 from './home/welcome
 })
 
 @RouteConfig([
-  { path: '/welcome', name: 'Welcome', component: WelcomeComponent, useAsDefault: true }
-  { path: '/products', name: 'Products', component: ProductListComponent }
+  { path: '/welcome', name: 'Welcome', component: WelcomeComponent, useAsDefault: true },
+  { path: '/products', name: 'Products', component: ProductListComponent },
+  { path: '/product/:id', name: 'ProductDetail', component: ProductDetailComponent } 
 ])
 export class AppComponent{
   pageTitle: string = "Product Management";

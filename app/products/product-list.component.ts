@@ -1,4 +1,5 @@
 import { Component, OnInit } from 'angular2/core';
+import { ROUTER_DIRECTIVES } from 'angular2/router';
 import { IProduct}           from './product';
 import { ProductFilterPipe } from './product-filter.pipe';
 import { StarComponent }     from '../shared/star.component';
@@ -7,7 +8,7 @@ import { ProductService }    from './product.service';
 @Component({
    templateUrl:   'app/products/product-list.component.html',
    styles:        [`thead{ color: #337AB7; }`],
-   directives:    [StarComponent],
+   directives:    [StarComponent, ROUTER_DIRECTIVES],
    pipes:         [ProductFilterPipe]
 })
 export class ProductListComponent implements OnInit{
