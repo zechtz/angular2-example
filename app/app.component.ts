@@ -1,21 +1,29 @@
-import { Component }                     from 'angular2/core';
-import { HTTP_PROVIDERS }                from 'angular2/http';
+import { Component }                                        from 'angular2/core';
+import { HTTP_PROVIDERS }                                   from 'angular2/http';
 import { 'rxjs/Rx' };
-import { ROUTER_PROVIDERS, RouteConfig } from 'angular2/router';
+import { ROUTER_PROVIDERS, RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
 
-import { ProductListComponent }          from './products/product-list.component';
-import { ProductService }                from './products/product.service';
-import { WelcomeComponent }              from './home/welcome.component';
+import { ProductListComponent }                             from './products/product-list.component';
+import { ProductService }                                   from './products/product.service';
+import { WelcomeComponent }                                 from './home/welcome.component';
 
 @Component({
   selector: 'pm-app',
   template: `
-      <div>
-        <h1>{{ pageTitle }}</h1>
-        <pm-products></pm-products>
-      </div>
+    <div>
+      <nav class="navbar navbar-default">
+         <div class="container-fluid">
+            <a class="navbar-brand">{{pageTitle}}</a>
+            <ul class="nav navbar-nav">
+              <li><a [routerLink]="['Welcome']">Home</a></li>
+              <li><a [routerLink]="['Products']">Product List</a></li>
+            </ul>
+         </div>
+      </nav>
+    </div>
+    <router-outlet></router-outlet>
     `,
-    directives:   [ProductListComponent],
+    directives:   [ROUTER_DIRECTIVES],
    providers:     [ProductService, HTTP_PROVIDERS, ROUTER_PROVIDERS]
 })
 
