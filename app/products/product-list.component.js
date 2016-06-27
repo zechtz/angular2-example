@@ -90,6 +90,9 @@ System.register(['angular2/core', './product-filter.pipe', '../shared/star.compo
                 ProductListComponent.prototype.ngOnInit = function () {
                     console.log('on init angular2 is running..');
                 };
+                ProductListComponent.prototype.onRatingClicked = function (message) {
+                    this.pageTitle = 'Product List: ' + message;
+                };
                 ProductListComponent = __decorate([
                     core_1.Component({
                         selector: 'pm-products',
