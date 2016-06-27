@@ -1,8 +1,10 @@
 import { Component }            from 'angular2/core';
 import { HTTP_PROVIDERS }       from 'angular2/http';
 import { 'rxjs/Rx' };           //load all features 
+
 import { ProductListComponent } from './products/product-list.component';
 import { ProductService }       from './products/product.service';
+
 @Component({
   selector: 'pm-app',
   template: `
@@ -15,5 +17,5 @@ import { ProductService }       from './products/product.service';
    providers:     [ProductService, HTTP_PROVIDERS]
 })
 export class AppComponent{
-  pageTitle: string = "ACME Product Management";
+  pageTitle: string = "Product Management";
 }
