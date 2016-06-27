@@ -2,3 +2,5 @@ node_modules/
 *.map
 app/*.map
 app/*.js 
+products/*.js
+producs/*.map
