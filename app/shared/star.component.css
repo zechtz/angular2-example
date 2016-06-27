@@ -4,4 +4,6 @@
 div {
     cursor: pointer;
 }
-
+.glyphicon-star{
+  color: orange;
+}
