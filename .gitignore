@@ -2,5 +2,8 @@ node_modules/
 *.map
 app/*.map
 app/*.js 
-products/*.js
-producs/*.map
+app/products/*.js
+app/products/*.map
+app/shared/*.js
+app/share/*.map
+
